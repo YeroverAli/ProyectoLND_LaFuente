@@ -14,7 +14,7 @@ body {
     padding: 0;
     display: flex;
     align-items: center;
-    background-color: #333;
+    background-color: #000000;
     flex-wrap: wrap;
 }
 
@@ -118,26 +118,42 @@ body {
 }
 
 #cabecera {
-    background-image: url("../img/hamburguesa1.jpg");
-    height: 66vh;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
     position: relative;
-    z-index: 1;
-    display: flex; 
-    justify-content: center; 
-    align-items: flex-start; 
-    padding-top: 50px; 
+    height: 66vh; /* Ajusta la altura según tus necesidades */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; /* Asegúrate de que el video no se salga del contenedor */
+}
+
+#videoFondo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Escala adecuadamente el video */
+    z-index: -1; /* Envía el video al fondo */
 }
 
 #cabecera h1 {
+    position: absolute;
     color: white;
-    font-size: 5rem; 
-    font-weight: bold; 
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); 
-    margin: 0; 
+    font-size: 5rem; /* Ajusta el tamaño de la fuente */
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Agrega sombra para mejor legibilidad */
+    text-align: center;
+    margin: 0;
+    z-index: 1; /* Asegura que el texto esté sobre el video */
 }
+
+/* Ajustes para pantallas más pequeñas */
+@media (max-width: 768px) {
+    #cabecera h1 {
+        font-size: 3rem; /* Reduce el tamaño del texto en dispositivos pequeños */
+    }
+}
+
 
 #cabecera::before {
     content: ''; 
@@ -336,7 +352,6 @@ body {
     cursor: pointer;
 }
 
-/* Responsive Footer */
 @media (max-width: 1024px) {
     #footer {
         flex-direction: column;
