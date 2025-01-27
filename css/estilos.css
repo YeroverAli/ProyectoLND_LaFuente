@@ -41,6 +41,73 @@ body {
     background-color: #575757;
 }
 
+#persona {
+    display: flex; /* Diseño en fila */
+    align-items: center; /* Centra los elementos verticalmente */
+    justify-content: flex-start; /* Alinea horizontalmente al inicio */
+    background-color: #cacaca;
+    height: 80vh;
+    padding: 10px;
+    position: relative; /* Para que los elementos absolutos dentro del contenedor respeten su posición */
+}
+
+#persona img {
+    height: 100%;
+    margin-left: 7%; /* Mantiene espacio inicial para la imagen */
+}
+
+#persona h2 {
+    margin: 0;
+    margin-left: 5%; /* Ajusta la separación del texto con respecto a la imagen */
+    font-size: 2.5rem; /* Texto más grande */
+    font-weight: bold; /* Hace el texto más grueso */
+    color: #333; /* Cambia el color del texto */
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5); /* Agrega un sombreado sutil al texto */
+    max-width: 40%; /* Limita el ancho del texto */
+    line-height: 1.5; /* Espaciado entre líneas */
+}
+
+#compra {
+    background-color: rgb(187, 0, 0); 
+    color: white; 
+    border-radius: 20px; /* Esquinas redondeadas */
+    padding: 30px 40px; /* Más espacio interno */
+    margin-left: 5%; /* Ajusta la separación respecto al texto */
+    width: 500px; /* Ancho más grande */
+    height: auto; 
+    text-align: center; 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Sombra para resaltar el cartel */
+    display: flex; /* Flexbox para centrar contenido */
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#compra p {
+    font-size: 1.5rem; /* Tamaño del texto del párrafo */
+    margin-bottom: 20px; /* Espacio entre el párrafo y el botón */
+}
+
+#compra button {
+    background-color: white; 
+    color: rgb(187, 0, 0); 
+    border: none; 
+    border-radius: 10px; 
+    padding: 15px 30px; 
+    font-size: 1.2rem; 
+    font-weight: bold; 
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+#compra button:hover {
+    background-color: rgb(255, 255, 255, 0.8); 
+    color: #a00000; 
+    transform: scale(1.1); /* Hace que el botón crezca al pasar el cursor */
+}
+
+
+
 #contenedorCabecera {
     background-color: black;
     display: flex;
@@ -119,11 +186,11 @@ body {
 
 #cabecera {
     position: relative;
-    height: 66vh; /* Ajusta la altura según tus necesidades */
+    height: 66vh; 
     display: flex;
     justify-content: center;
     align-items: center;
-    overflow: hidden; /* Asegúrate de que el video no se salga del contenedor */
+    overflow: hidden; 
 }
 
 #videoFondo {
@@ -132,28 +199,27 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Escala adecuadamente el video */
-    z-index: -1; /* Envía el video al fondo */
+    object-fit: cover; 
+    z-index: -1; 
 }
 
 #cabecera h1 {
     position: absolute;
     color: white;
-    font-size: 5rem; /* Ajusta el tamaño de la fuente */
+    font-size: 5rem;
     font-weight: bold;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Agrega sombra para mejor legibilidad */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); 
     text-align: center;
     margin: 0;
-    z-index: 1; /* Asegura que el texto esté sobre el video */
+    z-index: 1; 
 }
 
-/* Ajustes para pantallas más pequeñas */
+
 @media (max-width: 768px) {
     #cabecera h1 {
-        font-size: 3rem; /* Reduce el tamaño del texto en dispositivos pequeños */
+        font-size: 3rem; 
     }
 }
-
 
 #cabecera::before {
     content: ''; 
@@ -167,7 +233,7 @@ body {
 }
 
 
-/* Contenedor de la galería */
+
 #galeria {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
@@ -177,7 +243,6 @@ body {
     position: relative;
 }
 
-/* Imágenes de la galería */
 #galeria .imagen-container {
     position: relative;
     overflow: hidden;
@@ -191,12 +256,10 @@ body {
     transition: transform 0.3s ease;
 }
 
-/* Efecto hover en la imagen */
 #galeria img:hover {
     transform: scale(1.1);
 }
 
-/* Título flotante sobre la imagen */
 #galeria .titulo {
     position: absolute;
     bottom: -50px;
@@ -211,12 +274,10 @@ body {
     transition: bottom 0.3s ease;
 }
 
-/* Mostrar el título al hacer hover */
 #galeria .imagen-container:hover .titulo {
     bottom: 0;
 }
 
-/* Media queries para ajustar la galería */
 @media (max-width: 1024px) {
     #galeria {
         grid-template-columns: repeat(3, 1fr);
@@ -234,7 +295,6 @@ body {
     }
 }
 
-/* Animación de aparición progresiva */
 @keyframes fadeIn {
     from {
         opacity: 0;
@@ -246,13 +306,11 @@ body {
     }
 }
 
-/* Aplicar la animación a las imágenes */
 #galeria .imagen-container {
-    opacity: 0; /* Comienza invisible */
+    opacity: 0;
     animation: fadeIn 1s ease forwards;
 }
 
-/* Escalonar la animación para cada imagen */
 #galeria .imagen-container:nth-child(1) {
     animation-delay: 0.2s;
 }
@@ -294,13 +352,6 @@ body {
 }
 
 
-
-
-
-
-
-
-/* Footer Styles */
 #footer {
     background-color: #333;
     color: white;
