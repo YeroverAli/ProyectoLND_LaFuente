@@ -42,69 +42,99 @@ body {
 }
 
 #persona {
-    display: flex; /* Diseño en fila */
-    align-items: center; /* Centra los elementos verticalmente */
-    justify-content: flex-start; /* Alinea horizontalmente al inicio */
-    background-color: #cacaca;
-    height: 80vh;
-    padding: 10px;
-    position: relative; /* Para que los elementos absolutos dentro del contenedor respeten su posición */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 40px;  /* Aumentado el padding */
+    background-color: #575757;
+    display: block;
+    max-width: 100%; /* Asegura que ocupe más espacio */
+    width: 100%; /* Aumenta el tamaño del contenedor */
 }
 
 #persona img {
-    height: 100%;
-    margin-left: 7%; /* Mantiene espacio inicial para la imagen */
+    width: 20%;  /* Aumentado el tamaño de la imagen */
+    height: auto;
+    margin-right: 30px; /* Aumentado el margen */
+    transition: transform 0.3s ease;
 }
 
 #persona h2 {
-    margin: 0;
-    margin-left: 5%; /* Ajusta la separación del texto con respecto a la imagen */
-    font-size: 2.5rem; /* Texto más grande */
-    font-weight: bold; /* Hace el texto más grueso */
-    color: #333; /* Cambia el color del texto */
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5); /* Agrega un sombreado sutil al texto */
-    max-width: 40%; /* Limita el ancho del texto */
-    line-height: 1.5; /* Espaciado entre líneas */
+    font-size: 2em;  /* Aumentado el tamaño del texto */
+    color: #fffbfb;
 }
 
 #compra {
-    background-color: rgb(187, 0, 0); 
-    color: white; 
-    border-radius: 20px; /* Esquinas redondeadas */
-    padding: 30px 40px; /* Más espacio interno */
-    margin-left: 5%; /* Ajusta la separación respecto al texto */
-    width: 500px; /* Ancho más grande */
-    height: auto; 
-    text-align: center; 
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Sombra para resaltar el cartel */
-    display: flex; /* Flexbox para centrar contenido */
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    margin-top: 20px; /* Aumentado el margen superior */
 }
 
 #compra p {
-    font-size: 1.5rem; /* Tamaño del texto del párrafo */
-    margin-bottom: 20px; /* Espacio entre el párrafo y el botón */
+    font-size: 1.5em; /* Aumentado el tamaño de texto */
+    color:white;
+    margin-bottom: 10px;
 }
 
 #compra button {
-    background-color: white; 
-    color: rgb(187, 0, 0); 
-    border: none; 
-    border-radius: 10px; 
-    padding: 15px 30px; 
-    font-size: 1.2rem; 
-    font-weight: bold; 
+    padding: 15px 30px;  /* Aumentado el padding */
+    font-size: 1.2em;  /* Aumentado el tamaño del botón */
+    background-color: #da5700;
+    color: white;
+    border: none;
     cursor: pointer;
-    transition: all 0.3s ease;
+    border-radius: 5px;
+    transition: transform 0.3s ease;
 }
 
 #compra button:hover {
-    background-color: rgb(255, 255, 255, 0.8); 
-    color: #a00000; 
-    transform: scale(1.1); /* Hace que el botón crezca al pasar el cursor */
+    background-color: rgba(255, 68, 0, 0.897);
+    transform: scale(1.4);
 }
+
+/* Media Queries */
+
+@media (max-width: 1024px) {
+    #persona {
+        flex-direction: column;
+        align-items: center;
+        padding: 15px;
+    }
+    
+    #persona img {
+        width: 120px;
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+    
+    #persona h2 {
+        font-size: 1.3em;
+    }
+}
+
+@media (max-width: 768px) {
+    #persona {
+        width: 100%;
+        padding: 10px;
+    }
+    
+    #persona img {
+        width: 100px;
+    }
+    
+    #persona h2 {
+        font-size: 1.1em;
+    }
+    
+    #compra p {
+        font-size: 1em;
+    }
+    
+    #compra button {
+        padding: 8px 16px;
+        font-size: 0.9em;
+    }
+}
+
 
 
 
