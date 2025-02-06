@@ -16,14 +16,14 @@ body {
     align-items: center;
     background-color: #000000;
     flex-wrap: wrap;
-    opacity: 0; /* Oculto inicialmente */
-    transform: translateY(-20px); /* Posición inicial */
-    transition: opacity 0.8s ease, transform 2s ease; /* Transición suave */
+    opacity: 0; 
+    transform: translateY(-20px);
+    transition: opacity 0.8s ease, transform 2s ease; 
 }
 
 body.loaded .menu {
-    opacity: 1; /* Mostrar menú */
-    transform: translateY(0); /* Posición final */
+    opacity: 1; 
+    transform: translateY(0); 
 }
 
 .menu img {
@@ -56,8 +56,8 @@ body.loaded .menu {
     justify-content: center;
     align-items: center;
     overflow: hidden;
-    opacity: 0; /* Comienza invisible */
-    animation: fadeIn 2s forwards; /* Animación de entrada */
+    opacity: 0; 
+    animation: fadeIn 2s forwards; 
 }
 
 #videoFondo {
@@ -68,8 +68,8 @@ body.loaded .menu {
     height: 100%;
     object-fit: cover; 
     z-index: -1;
-    opacity: 0; /* Comienza invisible */
-    animation: fadeInVideo 2s forwards 0.5s; /* Animación de entrada para el video con retardo */
+    opacity: 0; 
+    animation: fadeInVideo 2s forwards 0.5s; 
 }
 
 #cabecera h1 {
@@ -81,8 +81,8 @@ body.loaded .menu {
     text-align: center;
     margin: 0;
     z-index: 1;
-    transform: translateY(20px); /* Comienza ligeramente desplazado */
-    animation: slideIn 2s ease-out forwards; /* Animación de deslizamiento */
+    transform: translateY(20px);
+    animation: slideIn 2s ease-out forwards;
 }
 
 @media (max-width: 768px) {
@@ -202,9 +202,6 @@ body.loaded .menu {
     }
 }
 
-/* --- Media Queries para Responsividad --- */
-
-/* Tablets (pantallas menores a 1024px) */
 @media (max-width: 1024px) {
     .video-texto-section {
         flex-direction: column;
@@ -225,7 +222,6 @@ body.loaded .menu {
     }
 }
 
-/* Móviles (pantallas menores a 768px) */
 @media (max-width: 768px) {
     .texto-container h2 {
         font-size: 1.5rem;
@@ -241,7 +237,6 @@ body.loaded .menu {
     }
 }
 
-/* Teléfonos pequeños (pantallas menores a 480px) */
 @media (max-width: 480px) {
     .texto-container {
         padding: 5px;
