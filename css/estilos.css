@@ -726,40 +726,34 @@ body.loaded .menu {
     }
 }
 
-/* estilos.css */
 
 #boton-formulario {
-    background-color: #ff0000; /* Rojo llamativo */
+    background-color: #ff0000; 
     color: white;
     padding: 10px 20px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
     font-size: 16px;
-    margin-left: 20px; /* Espacio a la izquierda */
+    margin-left: 20px;
     transition: background-color 0.3s ease;
 }
 
 #boton-formulario:hover {
-    background-color: #cc0000; /* Rojo más oscuro al pasar el ratón */
+    background-color: #cc0000; 
 }
 
-/* estilos.css */
-
-/* estilos.css */
-
-/* Estilos para el modo blanco (fondo blanco brillante y texto oscuro) */
 body.modo-blanco {
-    background-color: #ffffff; /* Fondo blanco */
-    color: #000000; /* Texto negro */
+    background-color: #ffffff; 
+    color: #000000; 
 }
 
 body.modo-blanco .menu {
-    background-color: #f8f9fa; /* Fondo claro para el menú */
+    background-color: #f8f9fa; 
 }
 
 body.modo-blanco .menu-item a {
-    color: #000000; /* Texto negro para los enlaces del menú */
+    color: #000000; 
 }
 
 body.modo-blanco #inicio {
@@ -767,35 +761,35 @@ body.modo-blanco #inicio {
 }
 
 body.modo-blanco #cabecera h1 {
-    color: #000000; /* Texto negro para el título */
+    color: #000000; 
 }
 
 body.modo-blanco .texto-container p {
-    color: #000000; /* Texto negro para los párrafos */
+    color: #000000; 
 }
 
 body.modo-blanco #persona {
-    background-color: #f8f9fa; /* Fondo claro para la sección de persona */
+    background-color: #f8f9fa;
 }
 
 body.modo-blanco #contenedorCabecera {
-    background-color: #f8f9fa; /* Fondo claro para el contenedor de cabecera */
+    background-color: #f8f9fa; 
 }
 
 body.modo-blanco .contenedorCabecera p {
-    color: #000000; /* Texto negro para los párrafos */
+    color: #000000; 
 }
 
 body.modo-blanco #galeria {
-    background-color: #f8f9fa; /* Fondo claro para la galería */
+    background-color: #f8f9fa;
 }
 
 body.modo-blanco #valoraciones {
-    background-color: #f8f9fa; /* Fondo claro para las valoraciones */
+    background-color: #f8f9fa;
 }
 
 body.modo-blanco #footer {
-    background-color: #f8f9fa; /* Fondo claro para el footer */
+    background-color: #f8f9fa;
     color: #000000;
 }
 
@@ -803,22 +797,22 @@ body.modo-blanco #footer-section p{
     color: #000000;
 }
 
-/* Estilos para el botón de modo blanco */
+
 #boton-modo-blanco {
-    background-color: #ffffff; /* Fondo blanco */
-    color: #000000; /* Texto negro */
+    background-color: #ffffff; 
+    color: #000000; 
     padding: 10px 20px;
-    border: 1px solid #000000; /* Borde negro */
+    border: 1px solid #000000;
     border-radius: 5px;
     cursor: pointer;
     font-size: 16px;
-    margin-left: 20px; /* Espacio a la izquierda */
+    margin-left: 20px; 
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 #boton-modo-blanco:hover {
-    background-color: #000000; /* Fondo negro al pasar el ratón */
-    color: #ffffff; /* Texto blanco al pasar el ratón */
+    background-color: #000000; 
+    color: #ffffff;
 }
 
 
