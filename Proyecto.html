@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Proyecto</title>
     <link rel="stylesheet" type="text/css" href="css/estilos.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
@@ -11,11 +11,6 @@
 
 <body>
     <ul class="menu">
-        <script>
-            window.addEventListener('load', function() {
-                document.body.classList.add('loaded');
-            });
-        </script>
         <li><img src="img/logo.png" alt="Logo"></li>
         <input type="checkbox" id="menu-toggle" class="menu-toggle-checkbox">
         <label for="menu-toggle" class="menu-toggle">
@@ -37,6 +32,7 @@
             <a href="#footer">Contacto <i class="fas fa-phone-alt"></i></a>
         </li>
     </ul>
+    <script src="js/script.js"></script>
 
     <div id="cabecera">
         <video id="videoFondo" autoplay muted loop>
@@ -74,9 +70,9 @@
         <h2>¡¡Realiza este formulario y consigue una Hamburguesa BBQ GRATIS!!</h2>
         <div id="formulario">
             <p>Si estás interesado</p>
-            <a href="formulario.html">
-                <button><i class="fas fa-gift"></i> Click Aquí</button>
-            </a>
+            <a href="formulario.html" class="boton-enlace">
+                <i class="fas fa-gift"></i> Click Aquí
+            </a>            
         </div>
     </div>
     

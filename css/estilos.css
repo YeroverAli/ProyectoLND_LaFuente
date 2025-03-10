@@ -19,6 +19,7 @@ body {
     opacity: 0; 
     transform: translateY(-20px);
     transition: opacity 0.8s ease, transform 2s ease; 
+    justify-content: space-between;
 }
 
 body.loaded .menu {
@@ -30,6 +31,7 @@ body.loaded .menu {
     width: 150px;
     height: 100px;
     margin: 10px 20px;
+    margin-right: auto;
 }
 
 .menu-item {
@@ -47,6 +49,18 @@ body.loaded .menu {
 
 .menu-item:hover {
     background-color: #575757;
+}
+
+.menu-toggle {
+    display: none;
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+    margin-left: auto;
+}
+
+.menu-toggle-checkbox {
+    display: none;
 }
 
 #cabecera {
@@ -271,6 +285,24 @@ body.loaded .menu {
     animation: fadeInUp 1.5s ease-out forwards;
 }
 
+.boton-enlace {
+    display: inline-block;
+    padding: 15px 30px;
+    font-size: 1.2em;
+    background-color: #da5700;
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.boton-enlace:hover {
+    background-color: rgba(255, 68, 0, 0.897);
+    transform: scale(1.1);
+}
+
+
 #persona img {
     width: 20%;
     height: auto;
@@ -480,6 +512,37 @@ body.loaded .menu {
     }
 }
 
+@media (max-width: 400px) {
+    .menu {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px 0;
+    }
+
+    .menu img {
+        display: none;
+    }
+
+    .menu-toggle {
+        font-size: 24px;
+    }
+
+    .menu-item {
+        width: 100%;
+        text-align: center;
+        padding: 10px 0;
+    }
+
+    .menu-item a {
+        font-size: 14px;
+        display: block;
+        padding: 8px 0;
+    }
+}
+
+
+
+
 #galeria {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
@@ -663,6 +726,101 @@ body.loaded .menu {
     }
 }
 
+/* estilos.css */
+
+#boton-formulario {
+    background-color: #ff0000; /* Rojo llamativo */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-left: 20px; /* Espacio a la izquierda */
+    transition: background-color 0.3s ease;
+}
+
+#boton-formulario:hover {
+    background-color: #cc0000; /* Rojo más oscuro al pasar el ratón */
+}
+
+/* estilos.css */
+
+/* estilos.css */
+
+/* Estilos para el modo blanco (fondo blanco brillante y texto oscuro) */
+body.modo-blanco {
+    background-color: #ffffff; /* Fondo blanco */
+    color: #000000; /* Texto negro */
+}
+
+body.modo-blanco .menu {
+    background-color: #f8f9fa; /* Fondo claro para el menú */
+}
+
+body.modo-blanco .menu-item a {
+    color: #000000; /* Texto negro para los enlaces del menú */
+}
+
+body.modo-blanco #inicio {
+    background-color: #ffffff;
+}
+
+body.modo-blanco #cabecera h1 {
+    color: #000000; /* Texto negro para el título */
+}
+
+body.modo-blanco .texto-container p {
+    color: #000000; /* Texto negro para los párrafos */
+}
+
+body.modo-blanco #persona {
+    background-color: #f8f9fa; /* Fondo claro para la sección de persona */
+}
+
+body.modo-blanco #contenedorCabecera {
+    background-color: #f8f9fa; /* Fondo claro para el contenedor de cabecera */
+}
+
+body.modo-blanco .contenedorCabecera p {
+    color: #000000; /* Texto negro para los párrafos */
+}
+
+body.modo-blanco #galeria {
+    background-color: #f8f9fa; /* Fondo claro para la galería */
+}
+
+body.modo-blanco #valoraciones {
+    background-color: #f8f9fa; /* Fondo claro para las valoraciones */
+}
+
+body.modo-blanco #footer {
+    background-color: #f8f9fa; /* Fondo claro para el footer */
+    color: #000000;
+}
+
+body.modo-blanco #footer-section p{
+    color: #000000;
+}
+
+/* Estilos para el botón de modo blanco */
+#boton-modo-blanco {
+    background-color: #ffffff; /* Fondo blanco */
+    color: #000000; /* Texto negro */
+    padding: 10px 20px;
+    border: 1px solid #000000; /* Borde negro */
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-left: 20px; /* Espacio a la izquierda */
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+#boton-modo-blanco:hover {
+    background-color: #000000; /* Fondo negro al pasar el ratón */
+    color: #ffffff; /* Texto blanco al pasar el ratón */
+}
+
 
 
 #footer {
@@ -745,6 +903,66 @@ body.loaded .menu {
 
 @media (max-width: 1024px) {
     #footer {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        text-align: center;
+        padding: 10px;
+    }
+
+    #footer .footer-section {
+        flex: 0 1 45%;
+        margin: 5px;
+        font-size: 0.8rem;
+    }
+
+    #footer .footer-section h4 {
+        font-size: 0.9rem;
+    }
+
+    #footer .footer-section ul li a {
+        font-size: 0.7rem;
+    }
+
+    #footer .social-icons {
+        width: 100%;
+        justify-content: center;
+        margin-top: 10px;
+    }
+}
+
+@media (max-width: 900px) {
+    #footer {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        text-align: center;
+        padding: 10px;
+    }
+
+    #footer .footer-section {
+        flex: 0 1 45%;
+        margin: 5px;
+        font-size: 0.8rem;
+    }
+
+    #footer .footer-section h4 {
+        font-size: 0.9rem;
+    }
+
+    #footer .footer-section ul li a {
+        font-size: 0.7rem;
+    }
+
+    #footer .social-icons {
+        width: 100%;
+        justify-content: center;
+        margin-top: 10px;
+    }
+}
+
+@media (max-width: 600px) {
+    #footer {
         flex-direction: column;
         text-align: center;
     }
@@ -754,17 +972,64 @@ body.loaded .menu {
     }
 }
 
-@media (max-width: 600px) {
-    #footer .footer-section h4 {
-        font-size: 1rem;
+
+.container-encuesta {
+    background: rgb(0, 0, 0);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 50%;
+    text-align: center;
+    margin: 50px auto;
+}
+
+h2 {
+    color: #007bff;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+label {
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin-top: 15px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 1em;
+    transition: background 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+@media (max-width: 768px) {
+    .container-encuesta {
+        width: 90%;
     }
 
-    #footer .footer-section ul li a {
-        font-size: 0.8rem;
-    }
-
-    #footer .social-icons img {
-        width: 30px;
+    .navbar {
+        flex-direction: column;
+        align-items: center;
     }
 }
 
