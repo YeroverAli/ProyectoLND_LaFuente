@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 if (window.innerWidth) {
     window.addEventListener('load', function() { 
         document.body.classList.add('loaded');
@@ -43,3 +44,8 @@ botonModoBlanco.textContent = 'Modo Blanco';
 botonModoBlanco.onclick = toggleModoBlanco;
 
 document.querySelector('.menu').appendChild(botonModoBlanco);
+=======
+window.addEventListener('load', function() {
+    document.body.classList.add('loaded');
+});
+>>>>>>> db8fef31b01d1e6c468713755bd024475426be79
