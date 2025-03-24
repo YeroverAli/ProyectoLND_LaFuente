@@ -14,7 +14,7 @@ function redirigirAlFormulario() {
 
 const botonFormulario = document.createElement('button');
 botonFormulario.id = 'boton-formulario';
-botonFormulario.textContent = '¡Haz este formulario!';
+botonFormulario.textContent = 'Formulario';
 botonFormulario.onclick = redirigirAlFormulario;
 
 document.querySelector('.menu').appendChild(botonFormulario);
@@ -39,7 +39,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 const botonModoBlanco = document.createElement('button');
 botonModoBlanco.id = 'boton-modo-blanco';
-botonModoBlanco.textContent = 'Modo Blanco';
+botonModoBlanco.textContent = 'Blanco';
 botonModoBlanco.onclick = toggleModoBlanco;
 
 document.querySelector('.menu').appendChild(botonModoBlanco);
