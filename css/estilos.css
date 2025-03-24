@@ -661,6 +661,21 @@ body.loaded .menu {
     animation-delay: 2s;
 }
 
+#conten {
+    background-color: #333333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+#rss {
+    width: 30%;
+    margin-top: 30px;
+    background-color: #000000;
+    
+}
+
 #valoraciones {
     background-color: #333;
     padding: 50px 20px;
